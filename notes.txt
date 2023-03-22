@@ -1,0 +1,3 @@
+create an empty repo clone it to local machine
+npx create-react-app .
+
