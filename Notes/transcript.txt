@@ -1,0 +1,1426 @@
+0:00
+hello my friends today we are gonna design this beautiful website using material ui you are gonna learn how to
+0:07
+use the most common material ui components by creating a real world project
+0:13
+cards lists models icons and more and also you will
+0:19
+learn how to create your own themes how to customize styles
+0:24
+and how to build your own components then we'll go ahead and create a dark mode
+0:31
+team and we're gonna do this in just a minute it's an awesome project to learn
+0:36
+new mui and this project will be mobile responsive you'll see how easy to create
+0:42
+responsive designs using mui and finally we are gonna deploy this website using a
+0:48
+hosting service and as always we will be using hostinger it's one of the most
+0:54
+popular hosting providers and the sponsor of this video it's really cheap really fast and i
+1:01
+really love its user-friendly dashboard you can deploy all your websites in one
+1:06
+hosting you will have more than enough storage but the best thing is you are
+1:11
+gonna get a free domain and free ssl certificate at this price
+1:16
+you can choose any time period here and if you use the link in the description below or la model coupon code here you
+1:25
+are gonna get an extra discount after choosing the payment methods and purchasing you are gonna redirect it to
+1:32
+hostinger panel and as you can see i have chosen the business shared hosting
+1:38
+so let's claim our free domain and set up our hosting i'm gonna write a domain
+1:44
+name if it's available you will be able to register and it's ready
+1:50
+so let's set up the hosting i'll choose start from scratch
+1:56
+and i'll select my new domain we can finish the setup it's gonna take a while and right after
+2:03
+that you are gonna see your panel and you are ready you can manage your
+2:09
+domains your files and you are gonna see how easy to deploy any application using
+2:15
+this file manager so if you are ready let's create our website and deploy it
+2:21
+here okay i created a new folder and i'm
+2:27
+gonna create a react app to do that i will open my terminal and
+2:32
+right here mpx create react app
+2:37
+and i want to install everything here so i will say dodge and enter during this
+2:42
+process let's check out the new material ui page it's not material ui anymore
+2:48
+it's mui they have changed its name and the website now it's much clearer and
+2:55
+more effective i really love this version it's one of my favorite after this tutorial i
+3:01
+believe that it's gonna be yours too so let's get started so we are going to
+3:07
+install mui to do that there are two options we should use a styling library to run
+3:14
+material ui so you can either use emotion or style components you are
+3:19
+probably familiar with style components but there's a problem here if you create any ssr project it might
+3:27
+cause some problems that's why they are using emotion as a default library so we
+3:33
+are gonna use emotion2 so i will copy here if you are using npm
+3:39
+just copy this line if you are using yarn like me copy this line and don't worry about
+3:45
+emotion you are gonna see that it's working like style components so let's come here i'm gonna paste here
+3:52
+it's gonna install and let's see what else as you can see mui is using this font
+3:59
+family by default we can do the same thing i can copy this and paste into index.html
+4:05
+and one more thing we are gonna install and it's gonna be mui icons if you check
+4:11
+the icons page as you can see there are tons of beautiful icons here
+4:17
+so we will be able to use all those icons so let's come back
+4:22
+firstly i'm gonna install my font family here by the way we should clean here
+4:30
+but before i'm gonna paste my link and here i'm gonna create a style
+4:37
+and inside i'm gonna choose all document and font family will be roboto
+4:43
+okay let's install these icons and after that we can get started i will copy here
+4:51
+and paste let's run our application npm start or
+4:58
+we unstart and as you can see it's ready let's clean here and everything will be
+5:05
+easier firstly we don't have any icon i will delete this theme
+5:11
+here and those comments and here
+5:18
+i can delete these those logos it's going to be only index.html and
+5:24
+here we don't need any css test file it's going to be only app.js and
+5:30
+index.js and finally inside application i'm going to delete them
+5:37
+and of course inside index.js i'm gonna
+5:42
+delete this css and here and that's all okay
+5:49
+like that and as you can see there is a default space here i'm going to delete this
+5:55
+and i can come here and say margin 0 and that's all we can get
+6:00
+started i'm going to close here and my sidebar let's see how we can use it as you can
+6:07
+see we are using mui elements like that we are importing and using as a
+6:13
+component actually let's open up buttons
+6:18
+here and here as you can see we have different kinds of buttons here let's
+6:25
+copy them and paste here i'm going to come here and delete the last letter and i will write again as
+6:32
+you can see it provides all those libraries we are gonna use material ui button
+6:38
+like that i will save and as you can see they are here
+6:44
+first one is only text this is content and this is outline only with order so
+6:51
+you can give any attribute like disabled href let's say disabled
+6:57
+for this and as you can see you don't have to worry about any styling and we can
+7:03
+change their colors let's say color primary
+7:09
+actually it's primary by default and let's change and right here
+7:16
+secondary and as you can see it's purple right now purple is a weird choice as a
+7:22
+secondary color but anyway you will learn how to change these colors and also we can give any
+7:29
+size large medium or small let's make small
+7:34
+and like that and also we can give any icon for our buttons as you can see we
+7:40
+are writing start icon and passing our icon let's choose any icon here i will say
+7:48
+settings i'm gonna choose field here okay we can use this one as you can see
+7:53
+you can import it like that and i will say start icon
+8:00
+and it's going to be settings icon like that it's that easy
+8:07
+let's create one more icon here and let's change this color it's going
+8:13
+to be success for example and this icon will be
+8:19
+let's say add we can use this one if you don't want to copy and paste
+8:24
+again and again basically you can choose this name and write it here
+8:31
+add and as you can see i will click and it comes from icons material
+8:36
+i can do the same thing for this one instead of writing them in different lines i would just say
+8:43
+settings and let's delete this one and in this case it's going to be just settings
+8:51
+settings and add new post for example okay perfect
+8:58
+so i'm gonna add a text here to do that we are gonna use mui typography
+9:05
+i will come here and as you can see we don't need to import any font source that because we have already installed
+9:12
+in index.html so don't worry about that so what i'm gonna do is using typography
+9:19
+component and giving its type as you can see it's h1 so what's this component
+9:25
+basically it takes tile from h1 but it's gonna be actually h2 let me show you you
+9:32
+are gonna understand better i'm gonna copy here and let's paste i'm gonna import and component will be
+9:40
+let's say p it uses h1 style but it's a p tag
+9:47
+okay as you can see it's really huge but if i open elements here inside my do
+9:54
+my buttons and as you can see it's a p tag of course in most cases we are not using
+10:00
+any components you can just delete here i just wanted to show you so far so good
+10:06
+but if i want to change this color i didn't like this purple there are many
+10:12
+ways to do that but the easiest one is writing an inner style
+10:17
+let's create another button here button and i will say my unique button
+10:26
+and variant will be contained again and what i'm gonna do is keeping here as x
+10:32
+property and inside i can write any style let's say background color
+10:37
+it's gonna be sky blue for example and what else i can say
+10:42
+text color is gonna be this light gray i can give any margin by the way if you
+10:48
+are using material ui you can use this shortcut also you can directly say m
+10:54
+but let's use margin and it's gonna be five and let's see first and later we
+11:00
+can add more and as you can see it's here but when i hover over as you can see
+11:06
+this blue color is still here and we are going to change it i'm just going to write
+11:12
+hover and my style inside i will say background color again
+11:20
+and that's a light blue okay perfect i can do the same thing for
+11:26
+disabled attribute for example let's give comma first and i will say
+11:32
+disabled background color will be font color will be white
+11:40
+of course we should make it disabled first and that's all this is how we are
+11:46
+applying our own style let's leave this disabled and what if i want to create
+11:51
+one more button same button like that okay it's here but writing them like
+11:57
+that again and again is not a good idea so what we can do basically we can create
+12:04
+our own button component here and here is how we can use motion or style
+12:09
+components so i will say const blue button and i will say styled it's gonna be mui
+12:18
+and material i'm gonna choose this and inside i can select any mui
+12:23
+component or html element let's say button and here we are gonna just write our
+12:30
+styles let's copy here like that and paste here so i can use it
+12:37
+everywhere let's delete them i'll say blue button
+12:42
+my button and one more let's say another button
+12:48
+and it's that easy so if you are using the same color in multiple components
+12:54
+you don't have to write them in every component like that basically you can create your own team let's come here and
+13:01
+i'm gonna say team.js and here i'm gonna create my team i will
+13:07
+say export const theme and here i'm gonna use
+13:13
+create tv raw material ui and inside this i can create my own shapes on
+13:20
+colors let's check here customization and teaming and as you can see palette
+13:27
+object is where we are storing our colors as you can see primary secondary success
+13:33
+error or your custom color let's do that i will say palette and i
+13:39
+want to change my primary color and you can give any other variants inside for
+13:44
+example main disk color light i don't know sky blue whatever you want
+13:51
+let's do the same thing for secondary it's gonna be this color and also you
+13:58
+can create your own color let's say other color and name will be
+14:04
+this gray color if i come here and check as you can see nothing has changed that because we are
+14:11
+not using our team for this application basically you can come here and wrap all
+14:16
+your application with team provider and you can do the same thing for index.js by the way
+14:23
+this is how react 18 works we are not using react render anymore it's going be
+14:29
+create root so if you want to upgrade your react version make sure that your index.js looks like this otherwise you
+14:37
+might see any errors in your console okay anyway so what i'm gonna do is creating here
+14:44
+team provider from material and i'm gonna wrap my application
+14:49
+like that and finally i'm gonna import my team let's import this
+14:56
+import team from team file
+15:02
+okay i can use it here and after this as you can see our secondary
+15:09
+color has changed it was purple but right now it's green so if i come here
+15:14
+and change its color it was secondary let's make my other
+15:20
+color what was the name okay other color
+15:25
+like that as you can see it's grey now you can do the same thing for your
+15:31
+custom button here and here you should write your team
+15:37
+and let's close here and we can use our theme right now i will say
+15:43
+theme dot palette and other color
+15:48
+and main color of course and as you can see it's here it's that
+15:54
+easy so we can delete this you don't need any provider right now
+16:00
+but later you are gonna see how easy to create dark mode with this team and i'm
+16:05
+gonna take this back and right now you know the basics of
+16:12
+material ui of course i'm not gonna explain all those components here i think it's
+16:18
+pretty clear you will just copy and paste them i see a lot of tutorials just showing
+16:25
+all those components but if you are smart enough to use react probably you
+16:30
+know how to copy and paste them so what i want to do is showing you a
+16:36
+real world project we are gonna create a website we are gonna use the most common
+16:41
+components we are gonna give our styles you are gonna learn how to create responsive websites how to pass props
+16:49
+inside material ui styles so if you are ready let's clear here and start making
+16:56
+our project i'm gonna write everything
+17:01
+and this and those imports okay
+17:07
+everything from scratch so what we are gonna have we are gonna have another bar
+17:12
+here and after that we are gonna have three columns first one will be our sidebar second one
+17:18
+will be feet which includes our posts and last one will be right bar let's
+17:24
+create our components i will come here and say components
+17:30
+narrowbar jazz or jsx sidebar
+17:39
+feed and finally right bar
+17:44
+let's create our functions
+17:52
+sidebar feet and
+17:57
+right bar okay so before creating our number i want to show you how you can
+18:03
+use flexbox so firstly we are going to create our sidebar fit and write bar i
+18:09
+will close them and open up my app.js again my components sidebar feet
+18:16
+and right bar let's import them
+18:22
+components and sidebar feet and right brush
+18:32
+let's see as you can see they are here okay so how we are gonna use flexbox
+18:39
+because each component here will be different columns we are gonna have a flexbox container so let's see how you
+18:46
+can create flexbox container if you scroll through this menu bar you are gonna see layouts
+18:53
+first layout will be box basically it's like html div there is nothing special
+18:59
+we are just gonna wrap our components so what else here we have container it said div again but
+19:07
+it has some default margin let's try them actually so instead of do i will
+19:12
+say first box from material ui and as you can see
+19:18
+nothing has changed because it's acting like a dew so what else we have container
+19:30
+and as you can see there is a space here let's give background color and you can understand better
+19:39
+i'll say red there is a default margin and padding and its width is horizontal like that
+19:47
+it's a hundred percent so what else we have we have grid system here as you can see
+19:54
+if you want to create grid system you can use this component but there is something important here its name is
+20:01
+grid but it uses css flexbox actually it's not using css grid
+20:07
+this is why flexbox is really important this is why i'm using flexbox for my all
+20:14
+projects if you are using react react native you have to know how flexbox
+20:19
+works okay we don't need this that because we are not creating any two dimensions grid
+20:25
+system like that so let's check stack it's a grid system but it's only one
+20:33
+dimension it can be vertical or horizontal if it's vertical it's going
+20:38
+to be only one column if it's horizontal it's going to be only one row as you can
+20:44
+see we have direction here and we can't give any spacing between them
+20:50
+or you can add any dividers let's create this firstly i'm gonna take this back
+20:56
+and it's gonna be a box that's because we are gonna create our network here later let's write here
+21:04
+navbar we are gonna use it later and for those components i'm gonna
+21:09
+create a stack let's say stack from material ui
+21:14
+and i'm gonna wrap my components here like that and it's gonna be horizontal so i will
+21:22
+say traction as you can see column column reverse row and row reverse just like
+21:28
+flexbox i'm gonna choose raw they are horizontal right now so let's
+21:34
+give some spacing let's say two
+21:39
+as you can see some space between them you can also use align items or justify
+21:45
+content if i say justify content and center
+21:51
+they are going to be centered like that space between
+21:56
+is going to separate them like that basically you can give any flexbox
+22:01
+property here like that so we are using space between so if i
+22:07
+give those components any colors you can understand better i think
+22:12
+let's make them box also and i will use sx or i can use any
+22:18
+shortcut like background color and let's say sky
+22:24
+blue so i will do the same thing for feet and right bar
+22:30
+it's gonna be box background color let's say pink and for
+22:36
+right bar
+22:41
+box and background color let's say light coral for example
+22:48
+okay perfect as you can see they don't have any width remember how we are using flexbox we can directly give any
+22:55
+percentage just like with 20 percent is 50 percent but the efficient way is
+23:02
+using flex so for the sidebar it's gonna be flex 1
+23:09
+let's copy this 4 feet is going to be flex let's say 4
+23:15
+is going to be bigger and for the right side it's going to be 2.
+23:21
+sidebar is one unit feed is four times bigger than sidebar and right bar is two
+23:26
+times bigger than sidebar it's that easy by the way we can give some padding for
+23:32
+each how we can do this if i say p as you can see there is a shortcut here
+23:38
+i can directly just say two for others
+23:45
+two and padding too
+23:51
+like that awesome but what if we use any mobile phone if i open my console and click
+23:58
+here it's still same but for mobile screens it's not a good idea to see all those
+24:05
+elements here so what we can do we can basically delete this sidebar and right bar and we
+24:11
+can see only our feed just like instagram or facebook to do that we are
+24:17
+gonna use material ui breakpoints let's search for it i will say
+24:23
+breakpoints as you can see there is a default breakpoint here so we can use extra
+24:28
+small from 0 to 600 pixels it's going to be small from 600 to 900
+24:36
+medium from 900 to 1200 it works like that of course if you want
+24:42
+to use different breakpoints you can customize it you can create your own team and as you
+24:49
+can see our object will be breakpoints and you can change those breakpoints for
+24:54
+example you can make this 480 690 whatever you want it depends on you but
+25:01
+i'm gonna use the default one in this case if it's smaller than 600 pixels
+25:06
+it's going to be extra small so we can use this key so what i'm gonna do is
+25:12
+creating inner style like that and i'm gonna write here my condition i
+25:17
+will say if it's extra small just make it display now i'm gonna close my
+25:23
+sidebar by the way you can see better and i will say if it's small screen or
+25:28
+bigger it's gonna be display block or whatever you want
+25:34
+let's see right now i'm gonna open here again and as you can see we don't have sidebar anymore
+25:42
+i can do the same thing for right bar let's copy this line and paste it here
+25:51
+okay perfect only feed is here but if i open my desktop version it's gonna be
+25:57
+like that let's move this a little bit if it's under 600 it's going to be extra small
+26:04
+like that i'm coming coming and that's all it
+26:10
+works like that of course for tablets for small screens you can create another breakpoints but
+26:17
+for this tutorial i just want to show you the basics so we are ready to create our
+26:24
+number let's close them and i will say navbar
+26:31
+of course we should use it here bar i can delete this container by the way we are not using okay let's see how
+26:39
+we can create i will open up components and
+26:46
+app bar there are different kinds of app bars here you can use whatever you want but this
+26:53
+one looks pretty good i'm gonna use this but if you open source code you might be
+26:59
+a little bit confused that because there are many things here
+27:05
+of course we are not gonna copy paste anything i'm gonna show you the easiest way don't worry
+27:12
+let's see what it's using here okay here as you can see it's using box
+27:20
+it gives as x here but you can directly write flags also as we did before and
+27:25
+after that it creates upper and inside this add bar container we are gonna have
+27:31
+a toolbar basically it gives some default margin and padding of course you
+27:36
+can create here a stack as we did here and we can say put here our logo for the
+27:41
+center put maybe search input for the right side are icons but let's
+27:48
+go with this way so you can understand how it works so instead of tier i will
+27:53
+say apple and as you can see it has our primary
+27:59
+code and if i add inside toolbar
+28:05
+and wrap this text like that as you can see it gives this padding but
+28:11
+as you realize we cannot see our other components that because we didn't give any position for this upper
+28:18
+so i will say position you can give any css positioning for example static if
+28:24
+you do that you will be able to see other components and also you can say for example sticky
+28:31
+so in this case even if we scroll down on this screen now bar will be always on
+28:37
+the top so let's use this one and after that we are going to create our logo search bar
+28:43
+and icons to do that i want to use display flags again so we can use our
+28:49
+own toolbar so i will say const style toolbar
+28:56
+styled from material and it's gonna be a toolbar and i'm gonna say display flex
+29:04
+and again i'm gonna separate them so i will say justify content it's gonna be
+29:09
+space between so instead of toolbar i'm going to use this one
+29:15
+like that so let's create our logo it's going to be a text
+29:20
+let's say lamar tao and i'm going to give some variant here and it's gonna be
+29:26
+h6 like that perfect so let's make this responsive if i open my console again
+29:33
+oops i said stick it's gonna be sticky okay
+29:38
+so i'm going to open mobile screen here and as you can see it's really large right now if i add here search button or
+29:46
+any other icons they are going to be overflowing to prevent this let's think what we can do basically instead of this
+29:53
+text we can add some image or icon let's come here i'm not sure if there is
+30:00
+a llama or not okay there is no maybe pet okay this one is good pets we
+30:07
+are going to use this one so what i'm going to do is creating here my icon i'm going to import this
+30:13
+like that and again i'm going to use my slides here
+30:18
+again i will say display and for x small it's gonna be no
+30:25
+and if it's small or bigger than small it's gonna be block
+30:30
+and i will do the same thing for my icon i will copy this and paste here but this
+30:36
+time it's gonna be block and no and as you can see our logo is here
+30:43
+let's close here and i'm gonna shrink perfect
+30:50
+if it's small screen icon if it's bigger perfect so what else we are gonna need
+30:55
+we are gonna need a search bar so let's use something different here and i'm
+31:01
+gonna show you how you can use htmld const search bar or just search and it's
+31:08
+gonna be styled again but inside you can use any div element like that
+31:14
+and here i'm gonna use my team and inside i will say background color
+31:21
+it's going to be white so let's use it and you can see better
+31:26
+after this icon i will say use this search component and i will say
+31:32
+search and it's here it's end of the screen that because we are using just five
+31:37
+content remember it's space between so if we create another component here you are gonna see that our search bar in the
+31:45
+center let's copy this and create one more and this time it's gonna be let's say
+31:50
+icon container or just icons and it's gonna be a box from material so let's
+31:57
+use it here icons and scrubby icons inside for now i'm just writing text and
+32:04
+as you can see this is our search bar and this is our icons box let's close here by the way and let's give some more
+32:11
+styles firstly i want to give some padding from top and bottom it's going to be zero left and right 10 pixels
+32:19
+and let's use our team i will say border radius let's give comma here by the way and
+32:26
+it's gonna be of course you can give any pixels here but i want to show you how you can use team
+32:33
+i will say team dot shape and border radius
+32:39
+and this time as you can see it's not sharp anymore it looks much much better
+32:44
+but it's really small let's give some width i will say width
+32:50
+and it's going to be 40 percent for example okay perfect of course there is no input
+32:55
+inside let's see how we can add i will search for
+33:01
+input and it's going to be input base and as you can see we can use all those
+33:06
+props so let's use it inside this search
+33:11
+instead of this text i will call input base and i will import
+33:17
+and let's give a placeholder and it's going to be just search
+33:22
+like that and right now we can see our padding better so what about these icons
+33:28
+i'm gonna create my icons first one will be mail okay let's use this one but before
+33:35
+i want to show you one more thing and it's gonna be page
+33:40
+so instead of using this icon alone we can give some batch as you can see it's
+33:46
+really easy to use only thing usually is giving here a number and its color and
+33:52
+our icon so i'm gonna copy this and paste inside icons is gonna be our first
+33:58
+icon let's import this page and mail
+34:04
+and let's see as you can see it's here by the way i'm gonna delete this color here and this
+34:10
+page color will be red so i can say error it's just like primary secondary
+34:16
+and success like that of course we cannot see that because our container is white i'm gonna delete this
+34:24
+and perfect and i'm gonna add one more page here i'll just copy and paste and
+34:30
+it's gonna be notifications let's import as you can see it's here
+34:36
+and last thing will be a letter it's going to be our user avatar it's
+34:41
+here as you can see it's a circle you don't have to create any div and give
+34:46
+border radius it's that easy we are gonna use only this component
+34:52
+so after this page i will say avatar like that let's import
+34:57
+and we should give our source i'm just gonna copy and paste this image
+35:03
+from pixels.com and as you can see it's really big let's give some style here i can use
+35:10
+inner style and let's say width 30 and height will be the same
+35:17
+okay it's much better but as you can see it's not horizontal i will say display
+35:24
+and flex like that and i can give some space between them so if you are using flexbox
+35:30
+you can just give here a gap it's going to be 20 pixels
+35:36
+like that it's much better by the way i can align them align items it's going to
+35:42
+be center okay they are centered vertically so let's take care about our mobile device
+35:49
+by the way it's still here i'm just gonna refresh my page okay
+35:55
+let's come here actually it looks okay but for more practice let's give
+36:00
+something else it's gonna be more useful for you so what i'm gonna do if it's a small screen i'm just gonna show this
+36:07
+author and maybe username we are not gonna see these notifications
+36:12
+let's do that const user box for example i'll say styled and it's going to be a
+36:20
+box actually i can just copy this one user box and again it's going
+36:27
+to be display flex a line item center maybe last cap
+36:33
+and i'm going to use it here after icons user box
+36:38
+and it's going to include our avatar let's copy this and also it's going to
+36:44
+be our username let's say john and variant will be
+36:49
+just like that so what i'm gonna do is giving
+36:55
+my display condition if it's small screen we are gonna delete this one and we are gonna show our user box
+37:02
+if it's bigger it's gonna be the opposite so how we are gonna do this here as you can see we are using team we
+37:08
+can use it and i will say team dodge breakpoints
+37:14
+and i will say up here and if it's small or bigger than small that's why we are
+37:21
+using up so i'm gonna say display flex
+37:27
+in this case if it's smaller than this breakpoint which is 600 it's going to be
+37:33
+displayed none it's that easy if i save and as you can see it's not here anymore
+37:41
+but if i open it's here so i can do the same thing for this box
+37:47
+so i will copy here and paste and this time if it's smaller than this
+37:54
+screen it's going to be flex if it's bigger than 600 it's going to be displayed not
+38:00
+like that let's showing this perfect
+38:06
+so what else we can do we can add here a button so when we click on this avatar
+38:11
+we can see our user menu and we can do this let's search for menu
+38:18
+and as you can see when i click this button it opens this middle it's that easy so i'm gonna show you how
+38:26
+we can use it so let's copy this one but it doesn't have any position here so
+38:33
+okay it's gonna be this one we can't give any position let's see
+38:39
+okay it's here as you can see it's gonna be on the top and left side
+38:44
+let's copy this one and under my toolbar i'm gonna paste it
+38:51
+and let's import them of course we are gonna apply everything later so i'm gonna delete those
+38:58
+functions here maybe item okay firstly is gonna be
+39:03
+true that because i'm just showing for now don't worry about that and position will be top and right so if we open our
+39:12
+application as you can see it's here so how we are gonna decide if it's open or
+39:17
+not it's really easy we can just create use state here after never i will say
+39:22
+const open set open
+39:28
+use statehook at the beginning it's gonna be false it's gonna be closed
+39:34
+and when we click our avatar or this user box it's gonna be opening so i can
+39:40
+see here on click event take the event and set my state it's
+39:48
+gonna be true i will do the same thing for mobile version which is user box
+39:54
+okay and i will come here and write here my closing method
+40:00
+it's gonna be on close and again set state
+40:07
+set open and it's gonna be false so whenever we click somewhere else
+40:12
+it's gonna be closing let's try i will refresh
+40:19
+of course we didn't write here our condition it's not gonna be true it's going to be depending on our state let's try i will
+40:27
+click and as you can see it's here and when i click somewhere else
+40:33
+it's go it's that easy so let's open mobile version
+40:38
+and i'm gonna click here perfect it works
+40:43
+so we've finished our nail bar you can also give menu for these icons maybe for
+40:49
+this search button if you have any search list you can use autocomplete let's come here
+40:57
+and check and as you can see it's not like a search button but you can write anything
+41:03
+here pulse fiction and it's gonna choose this element
+41:09
+it's really useful if you are searching from any list you can use this one also
+41:14
+as you can see only thing you should do is giving your list as a option like
+41:20
+that okay i'm not gonna show this because we don't have any functionality
+41:25
+it's just a design so let's take care our sidebar
+41:30
+so let's open sidebar so what i'm gonna do is adding a list
+41:37
+let's check here i will say list this one
+41:44
+and as you can see it's pretty nice we have an icon and text we can use this and
+41:51
+also you can use a nested list like that you can give additional text here and
+41:58
+other options this one is nice also you can use this in our right bar but for
+42:03
+now let's create this basic one i will open here
+42:10
+and as you can see list component and inside list item and we are gonna add our icon here and i'm gonna copy here
+42:18
+and paste like that of course i should close my list component here
+42:24
+like that so i'm gonna import them list
+42:29
+list item button and we are gonna change this icon i can
+42:35
+delete this and finally text
+42:40
+and it's gonna be let's say home page so for this button we can add a new
+42:46
+component remember how it works so we can do the same thing it's a list item button but
+42:53
+its html tag will be a so in this case we can give link here of course we don't
+42:58
+have any but just right here something like that okay let's add icon i will come here and
+43:06
+search for home page and this one is good we can use it
+43:12
+um and i'm gonna import let's see okay perfect
+43:18
+by the way we can delete this background color we don't need anymore of course you can change its color this
+43:26
+border shape it depends on you so i'm gonna add other items
+43:31
+okay i added other items here there is nothing important just texts and icons
+43:39
+let's see as you can see it's much better but i want to add one more lisp item
+43:45
+here and it's gonna be our dart mode option so i'm gonna come here and search
+43:50
+for switch button and as you can see we can use this basic
+43:57
+one let's see what else we can use as you can see you can use any color
+44:03
+here but let's use this basic one
+44:10
+so i'm gonna create one more list item and our icon will be let's choose here
+44:18
+moon this is good i think we can use this one instead of this icon i'm gonna
+44:23
+use mode knight and we are not gonna have any text i'm
+44:28
+gonna delete this instead we are gonna use switch okay perfect
+44:35
+of course we are gonna arrange our dark mode but for now it looks awesome let's
+44:40
+create some posts inside this feed of course you can come here and create
+44:46
+another component which is list item and you can pass it's link it's text and icon but i'm not
+44:54
+gonna do this let's open up feed i can close them to show our posts i'm gonna use
+45:02
+material ui cards let's say card there's a basic card
+45:09
+or you can add any image and those interactive buttons
+45:15
+what else okay it's similar so we can use this one
+45:20
+it looks awesome it can be our user we can like or dislike this post but
+45:26
+there's a accordion here we can just get rid of this it's gonna be only this card let's see how we can
+45:33
+use it okay i can copy here of course we are gonna change
+45:40
+and i'm gonna paste here let's import them cards i'm gonna delete here we don't
+45:46
+need any custom width cut header author if you want to use your
+45:52
+theme color you have to import this also but i will just basically right here red
+46:00
+icon button media and i'm gonna add here my image
+46:05
+let's use this free image again and it's gonna be our text content
+46:11
+and our actions which is like button share button
+46:17
+we don't need that we are not gonna expand our cart item and we can delete this
+46:24
+we don't have any additional description okay let's see
+46:33
+okay i forgot this icon where is that okay here
+46:41
+more vertical okay let's select this background color we don't need this anymore
+46:49
+and perfect what we can do we can increase this image size let's come here
+46:54
+and as you can see there is a default height here let's say 20 percent so in
+47:00
+this case if i go to mobile version it's gonna look much better and in desktop
+47:05
+version it's nice also it's that easy guys if you use only html
+47:11
+and css it will take probably 20 minutes half hour but thanks to material ui it
+47:18
+just takes one minute but i'm gonna add one more thing here as you can see if i
+47:23
+click this heart button it's not changing so instead of this button i'm gonna add here a checkbox
+47:30
+let's see how we can use it this is the basic checkbox of course we are gonna use
+47:36
+icon and here when i click this it's filling inside this button we can use it
+47:43
+and it's really easy to use you're just giving an icon with only order
+47:48
+and when you check it which means when you click it changes to another icon
+47:54
+let's copy this i'm gonna delete this and check box
+47:59
+you don't have any prop here and let's import this
+48:05
+and that's all let's see right now as you can see it's only border when i click it's going to
+48:11
+be blue heart you can change its color i will say color will be red
+48:20
+it's much better so what else we can do
+48:26
+we can add multiple posts but this time
+48:31
+let's create another component pause all jazz i'm gonna create my
+48:36
+function here quickly and inside it's gonna be this card let's
+48:42
+copy this here of course we are gonna need all those
+48:47
+icons and components like that you don't need box here
+48:54
+and also i can delete here and
+48:59
+i will delete everything but box right now i can call my component i will
+49:07
+say card sorry it was paused i will say post and in this case i can
+49:13
+use multiple posts like that okay perfect of course you can pass this username by
+49:20
+the way it's a recipe maybe let's say
+49:27
+john doe 2022 [Music]
+49:32
+okay i'm not gonna give any probe it's gonna take time we can't leave it like that but there is something more here
+49:42
+what we can do is adding here a margin it's really close so for this card i
+49:48
+will say margin
+49:53
+it's gonna be five like that it's much much better but as
+49:58
+you realize we have a problem here that because we cannot see our list here it's really easy to handle that let's open
+50:06
+sidebar again and i'm gonna give here a position but if i give this for this box
+50:13
+let's say position fixed as you can see it looks really strange
+50:18
+that because fixed positioning is acting like a position absolute
+50:24
+so instead of this i'm gonna create one more box inside and it's gonna be our
+50:30
+wrapper and we can use position safely
+50:35
+box and i'm gonna wrap my list here [Music]
+50:42
+like that and right now i can give position
+50:48
+fixed let's see right now okay perfect and i'm scrolling and it's still
+50:56
+here so i'm gonna copy here and i will do the same thing for right bar
+51:03
+i'm gonna delete this background color and i'm gonna create one more box here
+51:13
+and i'm scrolling and it's staying here and also our nail bar remember it was
+51:19
+sticky awesome it works so what we can add here
+51:25
+we can add our online friends let's do that i'm gonna add
+51:31
+let's say online friends and i'm gonna give a variant here
+51:38
+let's say h6 but it's really thick let's make this thinner to do that i can
+51:44
+directly give font weight here and it's gonna be let's say a hundred
+51:51
+it's gonna be the thinnest one but we are not using a hundred i think let's open up index.html
+51:59
+and as you can see we are using just three hundred four hundred and five i'm just gonna add here
+52:05
+a hundred two hundred in this case it's gonna be thinner okay
+52:11
+perfect right now let's add our friends
+52:16
+i'm going to open our water again but this time we are not going to use only one avatar we are going to use avatar
+52:23
+group let's check here and as you can see it's going to be like
+52:28
+that you can give max probe here as you can see it's four and when you add five avatars it's gonna
+52:36
+show four avatars here but when you add five quarters it's gonna be plus two
+52:41
+here so let's use here and i'm going to paste here
+52:49
+our group okay perfect but as you can see we don't have any
+52:55
+image to prevent this i'm going to copy and paste my avatars here
+53:00
+and max number will be seven okay if you don't give any image it's gonna show
+53:06
+this blank avatar let's check for this user there is no avatar it's
+53:11
+gonna be this image so what else we can use we can create here a portal gallery
+53:18
+let's check i'll say list but this time it's going to be image list and as you can see it
+53:24
+works like a grid system you can use more artistic one like this one
+53:31
+and others this basic one is totally enough and this is how it works
+53:38
+we are going to create image list for each image we are gonna create image
+53:43
+list item of course we don't have any list you can create a json file but again i'm
+53:50
+gonna do this one by one but before let's create another
+53:55
+text here another title and it's gonna be
+54:01
+latest posts or photos and after this i'm gonna create image list
+54:10
+and inside this i'm gonna paste my items let's import this also
+54:18
+okay and as you can see you can give any custom height here or column number in this example if it's
+54:25
+more than three images this list is gonna move them in another line like that
+54:32
+so columns will be three columns and row height will be
+54:38
+let's say a hundred like that and also
+54:43
+you can arrange those spaces to do that i will say gap if i say five
+54:50
+for example it's gonna be something like that okay
+54:56
+by the way we can give a padding for this box or we can give a custom width
+55:02
+that because it's really close to end of the screen so let's come here and for
+55:07
+this box let's give it for example
+55:14
+okay right now it's much better by the way we can give some margin for this text
+55:21
+i will say margin top let's say two and margin bottom is gonna be two okay
+55:28
+perfect and let's add one more thing here and it's
+55:33
+gonna be latest conversations so i will copy here
+55:41
+latest conversations
+55:47
+and remember we have seen a list here let's check
+55:55
+and i saw something here okay this one is awesome
+56:01
+exactly what i want let's see how we are using again we are using list list item
+56:09
+user avatars and other texts let's directly copy this actually
+56:15
+it looks pretty nice like that
+56:21
+and i'm gonna import them let's import everything we need like that i don't wanna waste time okay
+56:28
+let's see and awesome of course there is no image that because they are still
+56:34
+static we don't have any image but if you want to you can give
+56:39
+let's give one of them by the way i can delete this
+56:44
+margin bottom maybe and perfect what else we can do
+56:53
+we have posts but there is no button to add any post let's create a button and
+56:59
+create here a model so let's create another component inside components i
+57:05
+will say add.js my function
+57:11
+and i'm going to add this inside app.js let's edit here
+57:16
+i'll say add from components and let's close them
+57:23
+okay so what kind of button we are gonna use
+57:28
+let's search for tooltip as you can see it's just a button but
+57:34
+underneath there is a text but inside instead of icon we are gonna be using
+57:40
+anything else i'm gonna show you but before let's copy this i'm gonna paste it here by the way it's
+57:47
+not gonna be deep it can be just react fragments and i'm gonna import this tooltip
+57:54
+i'm gonna delete here and let's see something else and it's gonna be fab
+58:01
+and as you can see it looks much more better it has this default animation inside so
+58:08
+we can use it i will copy this and paste inside
+58:16
+fab it's going to be primary and my icon here is going to be add icon but i
+58:22
+cannot do this that because our component name is already add so i'm going to install add icon let's come
+58:29
+here and say import add as add icon
+58:37
+and it's gonna be mui and icons
+58:43
+let's see and it's gonna be somewhere here but we
+58:50
+are gonna give another position for this like absolute or fixed so it's gonna be
+58:55
+somewhere here let's do that inside this tooltip i will
+59:01
+say x and position will be fixed
+59:06
+and we are going to give some position here bottom will be let's say 20
+59:14
+like that and left side will be something like 30 but if we do this
+59:21
+and then we open mobile version it's gonna look a little bit weird so i'm
+59:26
+gonna move this in the middle of the screen so i can write here my condition i will say left
+59:34
+and if it's extra small we are going to need some calculation and i will say
+59:41
+50 percent x small if it's medium it's going to be just 30. and as you can
+59:49
+see it's somewhere here but it's still not in the middle of the center that because we didn't calculate its radius
+59:56
+here if i remember correctly it was 25 pixels so if i say minus 25
+1:00:05
+it's gonna be on the middle by the way we have extra space here it shouldn't be
+1:00:11
+like that we are gonna handle that but before let's take care of this button
+1:00:17
+so when i click this button i'm gonna create a model here that we can add our
+1:00:22
+posts to do that let's come here and model okay i will click and as you can
+1:00:30
+see it's opening i can use this i will copy this
+1:00:37
+and after this tooltip i'm gonna paste
+1:00:42
+let's import we are gonna have a box we don't need this style
+1:00:49
+and those text i'm gonna delete and i will just say hello of course we are gonna need our
+1:00:56
+state as we always do i'm gonna create open set open
+1:01:04
+and the initial state will be false it's gonna be close
+1:01:12
+and when i click on this button on click methods
+1:01:19
+it's gonna be set open and true so i can do the same thing for
+1:01:27
+close method and it's going to be false i will come here
+1:01:33
+i'm clicking and as you can see hello is here
+1:01:38
+but i don't want a full screen box so what i'm gonna do is giving some width
+1:01:43
+and height for our box and making this model display flex
+1:01:49
+what i mean by that let's come here and let's say
+1:01:55
+beat 400 height will be blue 80
+1:02:02
+or whatever you want let's give background color and it's gonna be white
+1:02:08
+and i will give some padding it's gonna be three and as you can see it's here
+1:02:15
+maybe portal radius
+1:02:21
+i'll say five okay it's better
+1:02:27
+but as you can see it's not centered so i can create my own model let's say
+1:02:34
+styled model and i'm going to create my own model here i'll say const model
+1:02:43
+is going to be styled model i should import this
+1:02:51
+and i will say display flex align item center
+1:02:57
+and justify content center let's see right now
+1:03:04
+okay perfect so let's create a title here inside this box
+1:03:12
+and create post i'm gonna give my variant
+1:03:19
+h6 and maybe color
+1:03:25
+let's say gray let's see okay it's here i can center this
+1:03:31
+i will just use text align it's gonna be center
+1:03:39
+oops equal okay so what i'm gonna do is creating here a user avatar and username
+1:03:47
+to do that again as we did before i can create userbox
+1:03:52
+and inside we are gonna have our avatar username
+1:04:00
+let's say john doe and font weight will be 500 and
+1:04:08
+its type will be spam import this and let's create our user
+1:04:14
+box i can copy this actually
+1:04:21
+it's going to be user box and again display flex and align item
+1:04:26
+center by the way it's gonna be box of course i will click
+1:04:32
+and as you can see it's here i can give some margin here to do that
+1:04:37
+remember if you are using flexbox you can directly give cap here let's say 10
+1:04:43
+pixels and i'm gonna give margin button
+1:04:50
+okay we have margin here right now i can add my text box here to
+1:04:57
+do that we are going to use text field as you can see we can use this one but i
+1:05:05
+want to add more rows let's come here as you can see multi-line we can use this
+1:05:11
+it's the last one i'm gonna copy and after this user box we can add
+1:05:18
+i'm gonna import and we don't need any label
+1:05:24
+let's see first okay instead of this default value
+1:05:30
+i'm gonna add placeholder it's gonna look better and let's say what's on your mind
+1:05:39
+maybe let's give full width to do this i'm going to use sx and
+1:05:45
+width will be let's say a hundred percent okay perfect
+1:05:50
+but it doesn't look it's a placeholder i'm gonna close and open again probably
+1:05:57
+didn't say okay perfect it looks awesome
+1:06:03
+maybe a little bit smaller
+1:06:08
+okay right now let's add here some icons to do this we can use
+1:06:13
+stack layout i will say stack remember it's a flexbox and we can give
+1:06:20
+a direction and it's gonna be raw and for each item i'm gonna give a gap and it's gonna be
+1:06:27
+one let's see i'm gonna add some icons first one will be
+1:06:33
+emoji icon this one like that
+1:06:41
+let's import if i duplicate this we can see better
+1:06:46
+okay as you can see like that and for this stack let's give some margin margin
+1:06:51
+top will be two and margin bottom will be let's say
+1:06:56
+three okay much better and for others it's gonna be
+1:07:02
+image it's gonna be this one video camera back
+1:07:11
+and add person
+1:07:17
+this one i'm gonna add them and i'm gonna give different colors
+1:07:24
+let's add directly like that i'm gonna import them
+1:07:34
+okay as you can see primary secondary success and error
+1:07:40
+like that and there is one more thing we should do and it's going to be our button but let's do something different
+1:07:48
+i want to show you different components as much as i can
+1:07:53
+and it's going to be button group as you can see you can use different buttons
+1:07:58
+like that let's copy this and after this stack i will say
+1:08:04
+button group and button it's gonna be post and second one will be just icon
+1:08:14
+which icon we are gonna use let's come here date
+1:08:20
+wrench we are gonna use this one so it's gonna be like a schedule of
+1:08:25
+course inside component like that and i'm gonna import
+1:08:31
+okay but i'm gonna make this full width to do this i will just come here
+1:08:39
+and fold it maybe we can arrange its size it's
+1:08:44
+really big it's just an icon so i will say
+1:08:50
+with it's going to be 100 pixels for example oops
+1:08:56
+of course inside button
+1:09:01
+okay i'm gonna open and it's here
+1:09:06
+perfect it looks pretty good so we can change our dark mode
+1:09:12
+you cannot imagine how easy to use it let's open up objects
+1:09:18
+and here i'm gonna create a team i will say const
+1:09:24
+dark team and it's gonna be create team
+1:09:30
+from material ui and here we are gonna use palette and inside we are gonna use mod
+1:09:38
+and by default it has two modes first one is dark and second one is light of
+1:09:44
+course we are gonna change it so we are not gonna use any of them i will say const mode
+1:09:52
+set mode and at the beginning it's gonna be light mode so i can use it
+1:09:59
+here and i'm gonna wrap my application i will
+1:10:04
+say team provider and let's wrap this box
+1:10:16
+like that and right now we are able to use our dark team
+1:10:22
+okay it's light at the beginning but what if i change this
+1:10:30
+and as you can see as soon as i do that all those components are changing
+1:10:37
+this card this list this nail bar we don't have to do
+1:10:42
+anything but we don't have any background it's really easy to handle
+1:10:49
+i will come here and i will say background color background
+1:10:54
+and default let's go like that if i do this
+1:11:00
+as you can see it's black but what about our texts i will do the same thing
+1:11:07
+i will say color this time it's going to be text dot primary
+1:11:14
+and right now it's white that because our primary color is white
+1:11:19
+if i open this as you can see it's still light let's go to add page and i will do the
+1:11:27
+same thing i will copy here and
+1:11:32
+there is our box okay it's here and instead of white
+1:11:37
+i will say background color default text color primary
+1:11:44
+it's that easy guys it's just one minute thing but how we are gonna change it i will
+1:11:51
+come here and again at the beginning it's gonna be light and
+1:11:56
+and i'm gonna set this inside this sidebar when i click this button it's gonna be dark mode when i click again
+1:12:03
+it's gonna be light mode let's send this will say set mode and it's gonna be set mode and
+1:12:11
+also i'm gonna send my mod because we are gonna compare
+1:12:18
+okay let's open up sidebar and i'm gonna take my props
+1:12:24
+mode and set mod let's come here so i'm gonna add here on
+1:12:30
+change event and i will say set mode and i'm gonna write my
+1:12:36
+condition i'm gonna look inside mode and if it's light
+1:12:42
+it's gonna be dark and if it's not light it's gonna be
+1:12:48
+light that's all let's see i'm clicking and dark mode
+1:12:54
+clicking again light mode perfect
+1:13:01
+of course we can give endless examples but it's just a crash course i believe
+1:13:07
+that you feel much more confident right now you can play around all those
+1:13:12
+components and after creating couple projects i'm sure that it's gonna be your favorite ui
+1:13:19
+library so let's deploy our application
+1:13:25
+it's really easy only thing you should do is writing here npm
+1:13:31
+run and build it's gonna take a while
+1:13:36
+and after that it's gonna create a build folder here as you can see it's here and
+1:13:42
+it's ready it includes our index.html and our static files
+1:13:49
+let's open our hpanel and here i'm gonna choose my hosting
+1:13:55
+i'm using this one and in this page i'm gonna scroll and
+1:14:00
+find file manager i'm gonna click
+1:14:05
+and as you can see this is our main file this is our default home page i'm gonna
+1:14:12
+delete this and i'm gonna drag and drop my files
+1:14:19
+into this folder let's choose them and i will drag
+1:14:26
+and drop here
+1:14:32
+and that's all it's ready it was just couple seconds
+1:14:39
+and it's ready as you can see it works let's check out our functionalities
+1:14:46
+okay it's working let's try dark mode this button here
+1:14:52
+it's that easy guys and as you can see our connection is secure that because we
+1:14:57
+are using https connection and that's all i hope you liked it
+1:15:04
+if you learned something new today please like the video and if you want to support plummeter you can join the
+1:15:10
+channel or you can use the link in the description below and don't forget to follow lama dev social media accounts
+1:15:18
+i hope i will see you in the next tutorial goodbye
+1:15:40
+you

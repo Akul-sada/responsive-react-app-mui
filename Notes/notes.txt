@@ -1,0 +1,160 @@
+create an empty repo clone it to local machine
+npx create-react-app .
+include font to index.html file
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+/>
+install mui icons using npm
+npm install @mui/icons-material
+
+We can import different component such as Button 
+<Button variant="contained" color="secondary" size="large" startIcon={<Settings/>}>Settings</Button>
+
+Typography
+<Typography variant="h1" component="p">It's a h1 style it's a p tag</Typography>
+
+each has differenent properties
+
+custom styles can be given by property like sx={{
+    backgroundColor:"skyblue",
+    color:"#888",
+    margin:5,
+    "&:hover":{backgroundColor:"lightblue"},
+    "&:disabled":{
+      backgroundColor:"grey",color:'white'
+    }
+  }}
+
+  We can create a custom button by importin styled from mui like this
+  import styled from "@emotion/styled";
+
+    const BlueButton = styled(Button)({
+    backgroundColor:"skyblue",
+    color:"#888",
+    margin:5,
+    "&:hover":{backgroundColor:"lightblue"},
+    "&:disabled":{
+      backgroundColor:"grey",color:'white'
+    }
+
+  });
+we can use the buton like this 
+      <BlueButton>My Button</BlueButton>
+      <BlueButton>Another Button</BlueButton>
+This BlueButton will get all the styling given in the styled
+
+We need not write each and every styles in every components so we are making a seperate file called theme.js
+We create theme by using create theme from mui
+import { createTheme } from "@mui/system";
+
+export const theme = createTheme({
+    
+});
+
+To learn how to create theme check out
+https://mui.com/material-ui/customization/theming/
+
+export const theme = createTheme({
+    palette:{
+        primary:{
+            main:"#1760a5",
+            light:"skyblue"
+        },
+        secondary:{
+            main:'#15c630',
+        },
+        otherColor:{
+            main:"#999"
+        }
+    }
+    
+});
+To implement the theme in the application we should use theme provider 
+
+
+=====================================================================================================
+create a folder called components
+add following files
+Feed.js
+Navbar.js
+Rightbar.js
+Sidebar.js
+
+type rafce in each file and include in App.js
+function App() {
+  
+  return (<Box>
+    <Stack>
+    {/* <Navbar/> */}
+      <Feed/>
+      <Sidebar/>
+      <Rightbar/>
+    </Stack>
+  </Box>);
+ 
+}
+Box component
+The Box component serves  as a wrapper component
+contains properties such as 
+components
+sx  =to give styling to the components 
+https://mui.com/material-ui/react-box/
+Stack component:
+Stack component manages layout of immediate children alon with vertical and horizontal axis.
+justifyContent
+spacing
+direction
+divider <Divider orientation="vertical"/>
+spacing
+
+for sidebar we have givem flex 1
+for Navbar flex 4 navbar is 4 time bigger than sidebar
+for Rightbar flex 2 and Rightbar is 2 times bigger than sidebar
+
+<Box bgcolor={'skyblue'} flex={1} p={2}>Sidebar</Box>
+<Box bgcolor={"lightpink"} flex={4} p={2}>Feed</Box>
+<Box bgcolor={"lightcoral"} flex={2}>Rightbar</Box>
+
+in mobile device the right bar sidebar and navbar should not be side by side so we have breakpoint
+display css property as key we can use xs (0px to 600px) sm (600 to 900) md (900 to 1200) xl (1200 to 1536) 
+https://mui.com/material-ui/customization/breakpoints/
+<Box bgcolor={'skyblue'} flex={1} p={2} sx={{display:{xs:"none",sm:"bock"}}}>Sidebar</Box>
+
+styling of Navbar
+AppBar is component
+Toolbar is the actual component
+to add styled component we use custom styledToolbar
+
+const StyledToolbar = styled(Toolbar)({
+  display:"flex",
+  justifyContent:"space-between"
+});
+
+const Navbar = () => {
+  return (
+    <AppBar position='sticky'>
+      <StyledToolbar>Navbar</StyledToolbar>
+    </AppBar>
+  )
+}
+
+Styled component
+
+const StyledToolbar = styled(Toolbar)({
+  display:"flex",
+  justifyContent:"space-between"
+});
+const Search = styled("div")(({theme})=>({
+  backgroundColor:"white"
+}));
+const Icons = styled(Box)(({theme})=>({
+  backgroundColor:"white"
+}))
+styled compont can have an argument such as mui component such as Toolbar or Box or html components such as "div"
+
+
+
+
+
+
