@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { Attractions, Mail, Notifications } from "@mui/icons-material";
 import { AppBar, Toolbar, Typography, Box, InputBase, Badge, Avatar, Menu, MenuItem } from "@mui/material";
-import { theme } from "../theme";
 import React, { useState } from "react";
 
 const StyledToolbar = styled(Toolbar)({
