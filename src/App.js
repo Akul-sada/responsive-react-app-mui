@@ -1,9 +1,9 @@
-import Add from "./components/Add";
-import Feed from "./components/Feed";
-import Navbar from "./components/Navbar";
-import { Box, createTheme, Stack,ThemeProvider} from "@mui/material";
-import Rightbar from "./components/Rightbar";
 import Sidebar from "./components/Sidebar";
+import Feed from "./components/Feed";
+import Rightbar from "./components/Rightbar";
+import { Box, createTheme, Stack,ThemeProvider} from "@mui/material";
+import Navbar from "./components/Navbar";
+import Add from "./components/Add";
 import { useState } from "react";
 
 function App() {

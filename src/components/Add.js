@@ -4,7 +4,6 @@ import {
   Button,
   ButtonGroup,
   Fab,
-  IconButton,
   Modal,
   TextField,
   Tooltip,
@@ -19,8 +18,9 @@ import {
   PersonAdd,
   VideoCameraBack,
 } from "@mui/icons-material";
-import styled from "@emotion/styled";
+
 import { Stack } from "@mui/material";
+import styled from "@emotion/styled";
 
 const StyledModal = styled(Modal)({
   display: "flex",
@@ -47,11 +47,11 @@ const Add = () => {
           left: { xs: "calc(50% - 25px)", md: 30 },
         }}
       >
-        <IconButton>
-          <Fab color="primary" aria-label="add">
+        
+        <Fab color="primary" aria-label="add">
             <AddIcon />
-          </Fab>
-        </IconButton>
+        </Fab>
+        
       </Tooltip>
       <StyledModal
         open={open}
