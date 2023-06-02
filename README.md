@@ -1,6 +1,6 @@
 # Facebook clone
 
-View [Live Preview](react-mui-sadanand.netlify.app).
+View [Live Preview](https://react-mui-sadanand.netlify.app/).
 
 ## Getting Started with Create React App
 
